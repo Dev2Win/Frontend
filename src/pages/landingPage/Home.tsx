@@ -1,6 +1,6 @@
 import {
   Achievement,
-  CTA,
+  Call,
   Categories,
   Footer,
   Hero,
@@ -16,7 +16,7 @@ const Home = () => {
       <Process />
       <Categories />
       <Achievement />
-      <CTA />
+      <Call/>
       <Footer />
     </div>
   );

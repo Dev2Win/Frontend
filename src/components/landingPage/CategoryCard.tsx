@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React from "react";
+
 import { BsArrowUpRight } from "react-icons/bs";
 
 const CategoryCard = ({ icons, title }: any) => {

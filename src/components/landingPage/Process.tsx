@@ -1,4 +1,4 @@
-import React from "react";
+
 import icon from "../../assets/icons8-career-96.png";
 import icon1 from "../../assets/icons8-leadership-64.png";
 import icon2 from "../../assets/icons8-study-96.png";

@@ -1,4 +1,4 @@
-import React from "react";
+
 import image from "../../../assets/waving-hand.png";
 import "./profileCard.css";
 const ProfileCard = () => {

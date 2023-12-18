@@ -1,4 +1,4 @@
-import React from "react";
+
 import CategoryCard from "./CategoryCard";
 
 import { TiHtml5 } from "react-icons/ti";

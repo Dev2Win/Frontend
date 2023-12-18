@@ -1,6 +1,6 @@
 // LoginComponent.jsx
 
-import React, { useState } from "react";
+import { useState } from "react";
 import LoginImage from "../../assets/pexels-julia-m-cameron-4144100.jpg";
 import { Link, useParams } from "react-router-dom";
 

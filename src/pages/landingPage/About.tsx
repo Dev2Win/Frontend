@@ -1,4 +1,4 @@
-import React from "react";
+
 import ProfileCard from "../../components/reusables/profilecard/ProfileCard";
 import { Footer, Navbar } from "../../components/landingPage";
 
