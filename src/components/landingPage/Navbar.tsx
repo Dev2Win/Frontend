@@ -2,9 +2,11 @@ import { useState } from "react";
 
 import hamburgerMenu from "../../assets/hamburgerMenu.svg";
 import close from "../../assets/close.svg";
-import { useNavigate } from "react-router-dom";
-const Navbar = () => {
+import { Link, useNavigate } from "react-router-dom";
+
+const Navbar = ({open,setOpen}:any) => {
   const [toggle, setToggle] = useState(false);
+
   const navigate = useNavigate();
 
   const handleClick = () => setToggle(!toggle);
@@ -28,10 +30,16 @@ const Navbar = () => {
         </h2>
 
         <div className="hidden md:flex items-center ">
-          <ul className="flex gap-4"></ul>
+          <ul className="flex gap-4">
+            <li  style={{ fontFamily: "Poppins" }} >  </li>
+          </ul>
         </div>
 
         <div className="hidden md:flex gap-5">
+        <button onClick={()=> setOpen(!open)} className="border border-[20B486] flex justify-center items-center  bg-transparent  px-6 gap-2 py-4">
+              {/* <img src={lock} /> */}
+             Login
+            </button>
           <button
             onClick={handleDevLogin}
             style={{ background: "black" }}
@@ -49,8 +57,14 @@ const Navbar = () => {
           </button>
         </div>
 
+        <div className="flex md:hidden items-center gap-3">
+        <button onClick={()=> setOpen(!open)} className="  text-blue-400" >
+              {/* <img src={lock} /> */}
+              Login
+            </button>
         <div className="md:hidden" onClick={handleClick}>
           <img src={toggle ? close : hamburgerMenu} />
+        </div>
         </div>
       </div>
 
@@ -63,17 +77,19 @@ const Navbar = () => {
       >
         <ul>
           <div className="flex flex-col my-4 gap-4">
-            {" "}
-            <button className="border border-[20B486] flex justify-center items-center  bg-transparent  px-6 gap-2 py-4">
+          
+           <Link to='register/dev'>
+           <button className="border w-full border-[20B486] flex justify-center items-center  bg-transparent  px-6 gap-2 py-4">
               {/* <img src={lock} /> */}
               Become a Dev
-            </button>
-            <button className="px-8 py-5 rounded-md bg-blue-400 text-white font-bold">
+            </button></Link>
+           <Link to='register/coach'> <button className="px-8 w-full py-5 rounded-md bg-blue-400 text-white font-bold">
               Join as a Coach
-            </button>
+            </button></Link>
           </div>
         </ul>
       </div>
+     
     </div>
   );
 };

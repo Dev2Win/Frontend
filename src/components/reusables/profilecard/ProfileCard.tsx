@@ -3,7 +3,7 @@ import image from "../../../assets/waving-hand.png";
 import "./profileCard.css";
 const ProfileCard = () => {
   return (
-    <div className="card \ ">
+    <div className="card  ">
       <div className="card-inner shadow-lg shadow-blue-300 rounded-[15px]">
         <div className="front   bg-opacity-25">
           <h1 className="  text-[1.5rem]">Simon Adjei Tawiah</h1>

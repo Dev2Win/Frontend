@@ -5,6 +5,7 @@ import {
   FaInstagram,
   FaBehance,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -22,7 +23,7 @@ const Footer = () => {
           <h3 className="text-2xl font-bold mt-10">Contact Us</h3>
           <h3 className="py-2 text-[#6D737A]">Call : +233 554674801</h3>
           <h3 className="py-2 text-[#6D737A]">
-            Locate Us @ <br></br>Spintex,Accra
+            Locate Us at Spintex,Accra
           </h3>
           <h3 className="py-2 text-[#363A3D]">Email: dev2win@gmail.com</h3>
           <div className="flex gap-4 py-4">
@@ -48,15 +49,15 @@ const Footer = () => {
           <h3 className="text-2xl font-bold">Explore</h3>
           <ul className="py-6 text-[#6D737A]">
             <li className="py-2">Home</li>
-            <li className="py-2">About</li>
-            <li className="py-2">Course</li>
-            <li className="py-2">Blog</li>
-            <li className="py-2">Contact</li>
+            <li className="py-2"><Link to='about'>About</Link></li>
+            <li className="py-2"><Link to='#careers'>Careers</Link></li>
+          
+           
           </ul>
         </div>
 
         <div>
-          <h3 className="text-2xl font-bold">Category</h3>
+          <h3 className="text-2xl font-bold">Careers</h3>
           <ul className="py-6 text-[#6D737A]">
             <li className="py-2">Product Design</li>
             <li className="py-2">Software Development</li>
