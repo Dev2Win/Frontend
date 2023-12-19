@@ -1,5 +1,5 @@
 import { GiHamburgerMenu } from "react-icons/gi";
-import { Disclosure } from "@headlessui/react";
+
 import {
   MdOutlineSpaceDashboard,
   MdOutlineAnalytics,
@@ -16,14 +16,15 @@ const SidebarNavigation = () => {
   return (
     <div>
       <div>
-        <Disclosure className="    " as="nav">
-          <Disclosure.Button className="absolute lg:hidden top-4 right-4 inline-flex items-center peer justify-center rounded-md p-2 text-gray-800 hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white group">
+        <div >
+          <button className="absolute lg:hidden top-4 right-4 inline-flex items-center peer justify-center rounded-md p-2 text-gray-800 hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white group">
             <GiHamburgerMenu
               className="block lg:hidden md:block h-6 w-6"
               aria-hidden="true"
             />
-          </Disclosure.Button>
-          <div className="p-6 w-1/2 h-screen  bg-white  shadow-lg z-20 fixed top-0 -left-96 lg:left-0 lg:w-60  peer-focus:left-0 peer:transition ease-out delay-150 duration-200">
+          </button>
+        
+         <div className="p-6 w-1/2 h-screen  bg-white  shadow-lg z-20 fixed top-0 -left-96 lg:left-0 lg:w-60  peer-focus:left-0 peer:transition ease-out delay-150 duration-200">
             <div className="flex flex-col justify-start item-center">
               <h1 className="text-base text-center cursor-pointer font-bold text-blue-900 border-b border-gray-100 pb-4 w-full">
                 <h2
@@ -107,7 +108,8 @@ const SidebarNavigation = () => {
               </div>
             </div>
           </div>
-        </Disclosure>
+        
+        </div>
       </div>
     </div>
   );
