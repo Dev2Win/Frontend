@@ -1,7 +1,7 @@
-import { ReactNode, useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { useState } from "react";
+import { Outlet } from "react-router-dom";
 import { Footer, Navbar } from "../landingPage";
-import Modal from "../reusables/profilecard/Modal";
+
 
 
 const LandingPageLayout = () => {

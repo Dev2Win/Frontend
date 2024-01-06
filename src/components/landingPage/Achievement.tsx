@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import achievement from "../../assets/Group 1000000824.png";
 
 const Achievement = () => {
@@ -15,7 +16,7 @@ const Achievement = () => {
               internet and get exhausted . We bring the best to you.
             </p>
             <button className="max-[780px]:w-full my-4 px-8 py-5 rounded-md bg-blue-500 text-white font-bold">
-              Start Learning
+            <Link to='/register/dev'> Start Learning</Link>
             </button>
           </div>
         </div>

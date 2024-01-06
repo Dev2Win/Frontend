@@ -48,9 +48,9 @@ const Footer = () => {
         <div>
           <h3 className="text-2xl font-bold">Explore</h3>
           <ul className="py-6 text-[#6D737A]">
-            <li className="py-2">Home</li>
+            <li className="py-2"><Link to='/'>Home</Link></li>
             <li className="py-2"><Link to='about'>About</Link></li>
-            <li className="py-2"><Link to='#careers'>Careers</Link></li>
+           
           
            
           </ul>

@@ -1,9 +1,9 @@
 import ProfileCard from "../../components/reusables/profilecard/ProfileCard";
-import { Footer, Navbar } from "../../components/landingPage";
+
 import image from "../../assets/pexels-julia-m-cameron-4144100.jpg";
-import { useState } from "react";
+
 const About = () => {
-  const [open, setOpen] = useState(true);
+  
   return (
     <div className="">
       

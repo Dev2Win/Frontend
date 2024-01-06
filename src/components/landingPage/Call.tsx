@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom";
 import cta from "../../assets/Group 1000000823.png";
 
 const Call = () => {
@@ -18,7 +19,7 @@ const Call = () => {
             frustrating{" "}
           </p>
           <button className="max-[780px]:w-full my-4 px-8 py-5 rounded-md bg-blue-500 text-white font-bold">
-            Start Coaching
+           <Link to='/register/coach'> Start Coaching</Link>
           </button>
         </div>
       </div>
