@@ -11,17 +11,18 @@ import StudentDashboard from "./pages/learners/StudentDashboard";
 import Materials from "./pages/learners/Materials";
 import Profile from "./pages/learners/Profile";
 import About from "./pages/landingPage/About";
+import LandingPageLayout from "./components/layout/LandingPageLayout";
 
 const App = () => {
   return (
     <div>
-     
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="" element={<LandingPageLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="about" element={<About />} />
+        </Route>
         <Route path="login/:type" element={<Login />} />
-        <Route path="about" element={<About />} />
         <Route path="register/:type" element={<Register />} />
-        
         <Route path="dashboard" element={<Dashboard />}>
           <Route path="chats" element={<Chats />} />
           <Route path="mentors" element={<Mentors />} />

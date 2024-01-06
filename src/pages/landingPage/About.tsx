@@ -6,7 +6,7 @@ const About = () => {
   const [open, setOpen] = useState(true);
   return (
     <div className="">
-      <Navbar  open={open} setOpen={setOpen}  />
+      
       <div className=" flex flex-col  max-w-[1480px] mx-auto   mt-[3%]">
         <div className=" flex flex-col space-y-[5%] items-center justify-center">
           <h1
@@ -55,7 +55,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      
     </div>
   );
 };
