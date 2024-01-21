@@ -3,14 +3,35 @@
 import { useState } from "react";
 import LoginImage from "../../assets/pexels-julia-m-cameron-4144100.jpg";
 import { Link, useParams } from "react-router-dom";
+import { useSignUpAuthMutation } from "../../redux/slice/authApiSlice";
 
 const Register = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const [signUp]  = useSignUpAuthMutation();
   const { type } = useParams();
+
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
   };
+
+  const handleSignUp = async () => {
+    try {
+      // Perform validation if needed
+      // Call the signUpAuth mutation
+      const res = await signUp({username,  email, password });
+      console.log(res);
+
+      // Redirect or perform additional actions on successful sign-up
+    } catch (error) {
+      // Handle errors, e.g., show an error message
+      console.error("Sign-up failed:", error);
+    }
+  };
+
   return (
     <section className="bg-gray-50 min-h-screen flex items-center justify-center">
       {/* login container */}
@@ -28,17 +49,28 @@ const Register = () => {
             🚀
           </p>
 
-          <form action="" className="flex flex-col gap-4">
+          <form
+            action=""
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleSignUp();
+            }}
+            className="flex flex-col gap-4"
+          >
             <input
               className="p-2 px-3 mt-8 rounded-xl border"
               type="text"
               name="username"
-              placeholder="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              placeholder="Username"
             />
             <input
               className="p-2 px-3  rounded-xl border"
               type="email"
               name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="Email"
             />
             <div className="relative">
@@ -63,8 +95,8 @@ const Register = () => {
                 <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
               </svg>
             </div>
-            <button className="bg-blue-400 rounded-xl text-white py-2 hover:scale-105 duration-300">
-              Login
+            <button type="submit" className="bg-blue-400 rounded-xl text-white py-2 hover:scale-105 duration-300">
+              Signup
             </button>
           </form>
 
@@ -83,7 +115,7 @@ const Register = () => {
             >
               {/* ... SVG Path ... */}
             </svg>
-            Login with Google
+            Signup with Google
           </button>
 
           <div className="mt-5 text-xs border-b border-[#002D74] py-4 text-[#002D74]">

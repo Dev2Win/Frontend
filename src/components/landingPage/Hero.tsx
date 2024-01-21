@@ -2,7 +2,7 @@ import heroImg from "../../assets/Component 1.png";
 
 const Hero = () => {
   return (
-    <div className="w-full bg-white md:mt-[3%] py-24">
+    <div className="w-full bg-white px-5  py-24">
       <div className="md:max-w-[1480px] m-auto grid md:grid-cols-2 max-w-[600px]  px-4 md:px-0">
         <div className="flex flex-col group justify-start gap-4">
           <p

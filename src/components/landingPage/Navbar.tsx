@@ -3,7 +3,6 @@ import { useState } from "react";
 import hamburgerMenu from "../../assets/hamburgerMenu.svg";
 import close from "../../assets/close.svg";
 import { Link, useNavigate } from "react-router-dom";
-import Modal from "../reusables/profilecard/Modal";
 
 const Navbar = ({ open, setOpen }: any) => {
   const [toggle, setToggle] = useState(false);
@@ -20,7 +19,7 @@ const Navbar = ({ open, setOpen }: any) => {
     navigate("/register/coach");
   };
   return (
-    <div className="w-full h-[80px] sticky  right-0 left-0 z-30 top-0  bg-white border-b">
+    <div className="w-full h-[80px] sticky px-5  right-0 left-0 z-30 top-0  bg-white border-b">
       <div className="md:max-w-[1480px]  max-w-[600px] m-auto w-full h-full flex justify-between items-center md:px-0 px-4">
         {/* <img src={logo} className="h-[25px]" /> */}
         <Link to="/">
@@ -99,25 +98,7 @@ const Navbar = ({ open, setOpen }: any) => {
           </div>
         </ul>
       </div>
-      <Modal open={open} onClose={() => setOpen(!open)}>
-        <div
-          className=" flex flex-col gap-4 p-5
-       "
-        >
-          <Link to="login/dev">
-            <button className="border w-full border-[20B486] flex justify-center items-center  bg-transparent  px-6 gap-2 py-4">
-              {/* <img src={lock} /> */}
-              Login as Dev
-            </button>
-          </Link>
-          <Link to="login/coach">
-            {" "}
-            <button className="px-8 py-5 w-full rounded-md bg-blue-400 text-white font-bold">
-              Login as Coach
-            </button>
-          </Link>
-        </div>
-      </Modal>
+      
     </div>
   );
 };

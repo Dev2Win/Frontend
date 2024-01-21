@@ -8,7 +8,7 @@ const LandingPageLayout = () => {
     const [open, setOpen] = useState(false);
   return (
     
-    <div>
+    <div className=" ">
       <Navbar open={open} setOpen={setOpen} />
       <Outlet />
       <Footer />

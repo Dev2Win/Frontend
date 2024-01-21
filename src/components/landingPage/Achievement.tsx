@@ -3,7 +3,7 @@ import achievement from "../../assets/Group 1000000824.png";
 
 const Achievement = () => {
   return (
-    <div className="w-full bg-white py-24">
+    <div className="w-full px-5 bg-white py-24">
       <div className="md:max-w-[1480px] m-auto grid md:grid-cols-2 max-w-[600px]  px-4 md:px-0">
         <div className="flex  px-[5%] flex-col justify-center ">
           <div>

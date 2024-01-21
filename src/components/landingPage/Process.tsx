@@ -5,7 +5,7 @@ import icon2 from "../../assets/icons8-study-96.png";
 
 const Process = () => {
   return (
-    <div className="max-w-[1480px] mx-auto">
+    <div className="md:max-w-[1480px]  max-w-[600px] m-auto">
       <div className="">
         <h1
           style={{ fontFamily: "Poppins" }}
