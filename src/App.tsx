@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Login from "./components/login/Login";
 import Register from "./components/register/Register";
+import "./App.css";
 
 import Home from "./pages/landingPage/Home";
 import Dashboard from "./pages/dashboard/Dashboard";
@@ -9,8 +10,7 @@ import Mentors from "./pages/learners/Mentors";
 import Curriculum from "./pages/learners/Curriculum";
 import StudentDashboard from "./pages/learners/StudentDashboard";
 import Materials from "./pages/learners/Materials";
-
-import About from "./pages/landingPage/About";
+import About from "./pages/landingPage/about/About";
 import LandingPageLayout from "./components/layout/LandingPageLayout";
 import Profile from "./pages/profilePage/Profile";
 import { useState } from "react";

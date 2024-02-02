@@ -1,22 +1,22 @@
 import heroImg from "../../assets/Component 1.png";
-
+import Image from "../../assets/ourteam.svg";
 const Hero = () => {
   return (
-    <div className="w-full bg-white px-5  py-24">
-      <div className="md:max-w-[1480px] m-auto grid md:grid-cols-2 max-w-[600px]  px-4 md:px-0">
-        <div className="flex flex-col group justify-start gap-4">
-          <p
-            style={{ fontFamily: "Poppins" }}
-            className="py-2  md:leading-[50px] text-blue-400 text-3xl  md:text-[2.6rem]   font-bold"
-          >
-            DEVELOP A CAREER TO SUCCESS
+    <div className="w-full bg-[#F5FcFF] px-5  py-24">
+      <div
+        style={{ backgroundImage: `url(${Image})` }}
+        className="md:max-w-[1480px] m-auto grid md:grid-cols-2 max-w-[600px]  px-4 md:px-0"
+      >
+        <div className="flex flex-col group lg:px-8 justify-start gap-4">
+          <p className="md:text-6xl text-4xl font-bold text-headingcolor leading-snug md:leading-[76px]  pt-12 mb-5">
+            Develop <span className="text-primary">a career</span> to success
           </p>
-          <h1 className="lg:leading-[72px]  py-2 lg:text-[2.5rem] text-[1.5rem] font-semibold">
-            Access <span className="text-blue-400">Personalized</span> Hands-On
-            Learning Experience with Established{" "}
-            <span className=" text-blue-400">Mentors </span> of Your Choice
+          <h1 className="text-2xl text-body  leading-9  mb-8">
+            Access <span className="text-primary">personalized</span> hands-on
+            learning experience with established
+            <span className=" text-primary"> mentors </span> of your choice
           </h1>
-          <p className="py-2 text-lg text-gray-600">
+          <p className="text-2xl text-body leading-9 mb-8">
             Unlock your full potential where our coaches are dedicated to
             guiding you to success
           </p>
@@ -37,14 +37,14 @@ const Hero = () => {
 
                     </button>
                 </form> */}
-          <button className="px-8 py-3  hover:animate-bounce  rounded-md bg-blue-500 w-[15rem] text-white font-bold">
+          <button className=" py-2 w-11/12 lg:w-1/3 border bg-primary border-primary text-white rounded">
             Join our waitlist
           </button>
         </div>
 
         <img
           src={heroImg}
-          className="md:order-last    hover:animate-pulse   duration-1000  order-first"
+          className="md:order-last  w-full  hover:animate-pulse   duration-1000  order-first"
         />
       </div>
     </div>
