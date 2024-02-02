@@ -1,79 +1,176 @@
-
-import CategoryCard from "./CategoryCard";
-
-import { TiHtml5 } from "react-icons/ti";
-import { TbMicrophone2, TbMusic } from "react-icons/tb";
-import { HiOutlineBriefcase } from "react-icons/hi";
-import { WiSunrise } from "react-icons/wi";
-import { AiOutlineCamera } from "react-icons/ai";
-import { BiData } from "react-icons/bi";
-import { MdAttachMoney } from "react-icons/md";
-import { FaUniversity } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { GoArrowRight, GoArrowLeft } from "react-icons/go";
+import CS1 from "../../assets/supply-chain.jpg";
+import CS4 from "../../assets/xyz.jpg";
+import CS5 from "../../assets/e-commerce.jpg";
+import CS6 from "../../assets/marketing.jpg";
 
 const Categories = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [itemsPerPage, setItemsPerPage] = useState(1);
+
+  // const nextItems = () => {
+  //   const newIndex = currentIndex + itemsPerPage;
+  //   if (newIndex < cardsData.length) {
+  //     setCurrentIndex(newIndex);
+  //   } else {
+  //     // Start from the top if reaching the end
+  //     setCurrentIndex(0);
+  //   }
+  // };
+
+  // const prevItems = () => {
+  //   const newIndex = currentIndex - itemsPerPage;
+  //   if (newIndex >= 0) {
+  //     setCurrentIndex(newIndex);
+  //   } else {
+  //     // Go to the end if reaching the top
+  //     setCurrentIndex(cardsData.length - itemsPerPage);
+  //   }
+  // };
+
+  const nextItems = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % cardsData.length);
+  };
+
+  const prevItems = () => {
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + cardsData.length) % cardsData.length
+    );
+  };
+
+  // Update itemsPerPage based on breakpoints
+  const handleResize = () => {
+    if (window.innerWidth >= 1024) {
+      setItemsPerPage(3); // Set the number of items per page for larger screens
+    } else if (window.innerWidth >= 768) {
+      setItemsPerPage(2); // Set the number of items per page for medium screens
+    } else {
+      setItemsPerPage(1); // Set the number of items per page for small screens
+    }
+  };
+
+  // Call handleResize on component mount and window resize
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <div id='careers' className="w-full bg-[#67b0da] px-5  bg-opacity-10 py-24">
-      <div className="md:max-w-[1480px] m-auto max-w-[600px]  px-4 md:px-0">
-        <h1
-          style={{ fontFamily: "Poppins" }}
-          className="md:leading-[72px] md:text-[3rem] text-3xl font-bold"
-        >
-          Career <span className="text-blue-400">Development Areas</span>
-        </h1>
-        <p className="text-[1.5rem] text-gray-600">In the End you Must Win </p>
-
-        <div className="grid lg:grid-cols-4 grid-cols-2 py-12 md:gap-4 gap-1">
-          <CategoryCard
-            icons={<TbMusic size={30} />}
-            title={"Product Design"}
-          />
-          <CategoryCard
-            icons={<TiHtml5 size={30} />}
-            title={"Frontend Development"}
-          />
-          <CategoryCard
-            icons={<TbMicrophone2 size={30} />}
-            title={"Marketing"}
-          />
-          <CategoryCard
-            icons={<HiOutlineBriefcase size={30} />}
-            title={"Mobile Development"}
-          />
-
-          <CategoryCard
-            icons={<WiSunrise size={30} />}
-            title={"Robotics Enginering"}
-          />
-          <CategoryCard
-            icons={<AiOutlineCamera size={30} />}
-            title={"Data Analysis"}
-          />
-          <CategoryCard
-            icons={<TbMusic size={30} />}
-            title={"Machine Learnig"}
-          />
-          <CategoryCard icons={<BiData size={30} />} title={"Data Science"} />
-
-          <CategoryCard
-            icons={<TiHtml5 size={30} />}
-            title={"Engineering Design"}
-          />
-          <CategoryCard
-            icons={<TiHtml5 size={30} />}
-            title={"Health & Fitness"}
-          />
-          <CategoryCard
-            icons={<MdAttachMoney size={30} />}
-            title={"Game Development"}
-          />
-          <CategoryCard
-            icons={<FaUniversity size={30} />}
-            title={"Architecture"}
-          />
-        </div>
+    <section className="my-[120px] mx-[5%] w-[90%] lg:w-[86%] lg:mx-[7%]">
+      <h1 className=" text-4xl  mb-16 font-semibold">Career Areas </h1>
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
+        {cardsData
+          .slice(currentIndex, currentIndex + itemsPerPage)
+          .map((card) => (
+            <div key={card.id} className="col-span-2 md:col-span-1">
+              <div class="group relative overflow-hidden">
+                <img
+                  height="auto"
+                  width="auto"
+                  src={card.image}
+                  alt=" image"
+                  className="rounded-lg w-full  h-80 transform transition-transform group-hover:scale-110 ease-in-out duration-300 hover:cursor-pointer"
+                />
+              </div>
+              <Link>
+                <p className="font-bold text-3xl hover:text-purple-900 my-4">
+                  {" "}
+                  {card.title}
+                </p>
+              </Link>
+              <p className="font-medium my-2">{card.detail}</p>
+              <div className="text-purple-900 font-medium">
+                {card.categories.map((category, categoryIndex) => (
+                  <span key={categoryIndex}>
+                    <Link>{category.name}</Link>
+                    {categoryIndex < card.categories.length - 1 ? " / " : ""}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
       </div>
-    </div>
+      <div className="flex space-x-8 mt-4">
+        <button
+          onClick={prevItems}
+          className=" border border-slate-300 hover:text-white hover:bg-violet-700 rounded-full p-3"
+        >
+          {" "}
+          <GoArrowLeft width={60} height={60} />{" "}
+        </button>
+        <button
+          onClick={nextItems}
+          className=" border border-slate-300 hover:text-white hover:bg-violet-700 rounded-full p-3"
+        >
+          {" "}
+          <GoArrowRight width={40} height={60} />{" "}
+        </button>
+      </div>
+    </section>
   );
 };
 
 export default Categories;
+
+export const cardsData = [
+  {
+    id: "1",
+    image: CS1,
+    title: "Computer Engineering ",
+    detail:
+      "Our career development in computer engineering ensures you understand the basis of the career and introduces you to skills development path available in the career ",
+    categories: [
+      { name: "Hardware Engineering", link: "it-consultancy" },
+      { name: "Software Engineering", link: "design" },
+      { name: "Cybersecurity", link: "design" },
+      { name: "Networking", link: "design" },
+    ],
+  },
+  {
+    id: "4",
+    image: CS4,
+    title: "Computer Science",
+    detail:
+      "Our career development in computer Science ensures you understand the basis of the career and introduces you to skills development path available in the career ",
+
+    categories: [
+      { name: "Software Development", link: "development" },
+      { name: "UI/UX", link: "design" },
+      { name: "CyberSecurity", link: "design" },
+      { name: "Networking", link: "design" },
+    ],
+  },
+  {
+    id: "5",
+    image: CS5,
+    title: "Business Acounting",
+    detail:
+      "Our career development in Business Acoounting ensures you understand the basis of the career and introduces you to skills development path available in the career ",
+
+    categories: [
+      { name: "Business Intelligence", link: "it-consultancy" },
+      { name: "Data analysis", link: "development" },
+      { name: "Enterpreneurship", link: "design" },
+      { name: "Business Management", link: "design" },
+    ],
+  },
+  {
+    id: "6",
+    image: CS6,
+    title: "Electrical Engineering",
+    detail:
+      "Our career development in Electrical Engineering ensures you understand the basis of the career and introduces you to skills development path available in the career ",
+
+    categories: [
+      { name: "Power Systems Design", link: "design" },
+      { name: "Hardware Automation", link: "it-consultancy" },
+      { name: "Control System Design", link: "design" },
+      { name: "Electrical Wiring", link: "design" },
+    ],
+  },
+];

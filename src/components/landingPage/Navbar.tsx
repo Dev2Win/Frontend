@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = ({ open, setOpen }: any) => {
   const [toggle, setToggle] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
 
   const navigate = useNavigate();
 
@@ -19,87 +20,91 @@ const Navbar = ({ open, setOpen }: any) => {
     navigate("/register/coach");
   };
   return (
-    <div className="w-full h-[80px] sticky px-5  right-0 left-0 z-30 top-0  bg-white border-b">
-      <div className="md:max-w-[1480px]  max-w-[600px] m-auto w-full h-full flex justify-between items-center md:px-0 px-4">
-        {/* <img src={logo} className="h-[25px]" /> */}
-        <Link to="/">
-          <h2
-            style={{ fontFamily: "Poppins" }}
-            className=" font-bold group text-[2rem]"
-          >
-            Dev<span className="  text-[2rem] font-bold text-blue-400">2</span>
-            Win
-          </h2>
-        </Link>
+    <header className="w-full sticky top-0 left-0 right-0">
+      <nav
+        className={`py-4 md:px-12 px-4 bg-white ${
+          isSticky ? "sticky top-0 right-0 left-0 bg-white " : ""
+        }`}
+      >
+        <div className="md:max-w-[1480px]  max-w-[600px] m-auto w-full h-full flex justify-between items-center md:px-0 px-4">
+          {/* <img src={logo} className="h-[25px]" /> */}
+          <Link to="/">
+            <h2 className=" font-bold  group text-[2rem]">
+              Dev<span className="  text-[2rem] font-bold text-primary">2</span>
+              Win
+            </h2>
+          </Link>
 
-        <div className="hidden md:flex items-center ">
-          <ul className="flex gap-4">
-            <li style={{ fontFamily: "Poppins" }}> </li>
+          {/* <div className="hidden md:flex items-center ">
+            <ul className="flex gap-4">
+              <li style={{ fontFamily: "Poppins" }}> </li>
+            </ul>
+          </div> */}
+
+          <div className="hidden md:flex gap-5">
+            <button
+              onClick={() => setOpen(!open)}
+              className="px-4 py-2 bg-transparent border border-bgShade text-black rounded  "
+            >
+              {/* <img src={lock} /> */}
+              Login
+            </button>
+
+            <button
+              onClick={handleCoachLogin}
+              className="px-4 py-2 bg-primary border border-bgShade text-white rounded hover:bg-primary hover:text-white transition-all duration-300"
+            >
+              Join as a Coach
+            </button>
+            <button
+              onClick={handleDevLogin}
+              className="flex justify-between border  rounded-md  text-white bg-black  font-bold items-center  py-2   px-6 gap-2"
+            >
+              {/* <img src={lock} /> */}
+              Become a Dev
+            </button>
+          </div>
+
+          <div className="flex md:hidden items-center gap-3">
+            <button
+              onClick={() => setOpen(!open)}
+              className="px-4 py-1 bg-primary border border-primary text-white rounded hover:bg-primary hover:text-white transition-all duration-300"
+            >
+              {/* <img src={lock} /> */}
+              Login
+            </button>
+            <div className="md:hidden" onClick={handleClick}>
+              <img src={toggle ? close : hamburgerMenu} />
+            </div>
+          </div>
+        </div>
+
+        <div
+          className={
+            toggle
+              ? "absolute z-10 p-4  bg-white w-full px-8 md:hidden border-b"
+              : "hidden"
+          }
+        >
+          <ul>
+            <div className="flex flex-col my-4 gap-4">
+              <Link to="register/dev">
+                <button className="border w-full border-[20B486] flex justify-center items-center  bg-transparent  px-6 gap-2 py-4">
+                  {/* <img src={lock} /> */}
+                  Become a Dev
+                </button>
+              </Link>
+              <Link to="register/coach">
+                {" "}
+                <button className="px-8 w-full py-5 rounded-md bg-primary text-white font-bold">
+                  Join as a Coach
+                </button>
+              </Link>
+            </div>
           </ul>
         </div>
-
-        <div className="hidden md:flex gap-5">
-          <button
-            onClick={() => setOpen(!open)}
-            className="border border-[20B486] flex justify-center items-center  bg-transparent  px-6 gap-2 py-4"
-          >
-            {/* <img src={lock} /> */}
-            Login
-          </button>
-          <button
-            onClick={handleDevLogin}
-            style={{ background: "black" }}
-            className="flex justify-between  rounded-md  text-white   font-bold items-center  bg-transparent  px-6 gap-2"
-          >
-            {/* <img src={lock} /> */}
-            Become a Dev
-          </button>
-
-          <button
-            onClick={handleCoachLogin}
-            className="px-8 py-3 rounded-md bg-blue-500 text-white font-bold"
-          >
-            Join as a Coach
-          </button>
-        </div>
-
-        <div className="flex md:hidden items-center gap-3">
-          <button onClick={() => setOpen(!open)} className="  text-blue-400">
-            {/* <img src={lock} /> */}
-            Login
-          </button>
-          <div className="md:hidden" onClick={handleClick}>
-            <img src={toggle ? close : hamburgerMenu} />
-          </div>
-        </div>
-      </div>
-
-      <div
-        className={
-          toggle
-            ? "absolute z-10 p-4  bg-white w-full px-8 md:hidden border-b"
-            : "hidden"
-        }
-      >
-        <ul>
-          <div className="flex flex-col my-4 gap-4">
-            <Link to="register/dev">
-              <button className="border w-full border-[20B486] flex justify-center items-center  bg-transparent  px-6 gap-2 py-4">
-                {/* <img src={lock} /> */}
-                Become a Dev
-              </button>
-            </Link>
-            <Link to="register/coach">
-              {" "}
-              <button className="px-8 w-full py-5 rounded-md bg-blue-400 text-white font-bold">
-                Join as a Coach
-              </button>
-            </Link>
-          </div>
-        </ul>
-      </div>
-      
-    </div>
+      </nav>
+    </header>
   );
 };
 
