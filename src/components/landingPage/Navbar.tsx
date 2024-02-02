@@ -7,7 +7,7 @@ import Modal from "../reusables/profilecard/Modal";
 
 const Navbar = ({ open, setOpen }: any) => {
   const [toggle, setToggle] = useState(false);
-  const [isSticky, setIsSticky] = useState(false);
+  const isSticky = false
 
   const navigate = useNavigate();
 

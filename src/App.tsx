@@ -13,10 +13,10 @@ import Materials from "./pages/learners/Materials";
 import About from "./pages/landingPage/about/About";
 import LandingPageLayout from "./components/layout/LandingPageLayout";
 import Profile from "./pages/profilePage/Profile";
-import { useState } from "react";
+
 
 const App = () => {
-  const [open, setOpen] = useState(false);
+
   return (
     <div>
       <Routes>

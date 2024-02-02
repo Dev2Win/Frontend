@@ -1,9 +1,14 @@
-import ProfileCard from "../../../components/reusables/profilecard/ProfileCard";
+import { useEffect } from "react";
 import CallToAction from "./CallToAction";
 import Hero from "./Hero";
 import TeamCards from "./TeamCards";
 
 const About = () => {
+  useEffect(() => {
+    // Scroll to the top of the page on component mount
+    window.scrollTo(0, 0);
+  }, []); 
+
   return (
     <div className="">
       <Hero />

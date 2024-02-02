@@ -1,4 +1,4 @@
-import React from 'react'
+
 import ContentCard from './ContentCard'
 
 const Profile = () => {
