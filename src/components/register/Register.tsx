@@ -11,7 +11,7 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const [signUp]  = useSignUpAuthMutation();
+  const [signUpAuth]  = useSignUpAuthMutation();
   const { type } = useParams();
 
   const togglePasswordVisibility = () => {
@@ -22,7 +22,7 @@ const Register = () => {
     try {
       // Perform validation if needed
       // Call the signUpAuth mutation
-      const res = await signUp({username,  email, password });
+      const res = await signUpAuth({username,  email, password });
       console.log(res);
 
       // Redirect or perform additional actions on successful sign-up

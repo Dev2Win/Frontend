@@ -9,11 +9,14 @@ import Mentors from "./pages/learners/Mentors";
 import Curriculum from "./pages/learners/Curriculum";
 import StudentDashboard from "./pages/learners/StudentDashboard";
 import Materials from "./pages/learners/Materials";
-import Profile from "./pages/learners/Profile";
+
 import About from "./pages/landingPage/About";
 import LandingPageLayout from "./components/layout/LandingPageLayout";
+import Profile from "./pages/profilePage/Profile";
+import { useState } from "react";
 
 const App = () => {
+  const [open, setOpen] = useState(false);
   return (
     <div>
       <Routes>
@@ -21,8 +24,12 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
         </Route>
+
         <Route path="login/:type" element={<Login />} />
         <Route path="register/:type" element={<Register />} />
+        <Route path="profile" element={<Profile />} />
+        
+
         <Route path="dashboard" element={<Dashboard />}>
           <Route path="chats" element={<Chats />} />
           <Route path="mentors" element={<Mentors />} />
