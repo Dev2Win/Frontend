@@ -2,6 +2,7 @@ import member from "../../../assets/myson.png";
 import member1 from "../../../assets/simon.png";
 import member2 from "../../../assets/kokonu.png";
 import member3 from "../../../assets/asmah.png";
+import member4 from '../../../assets/genesis.png'
 
 import ProfileCard from "../../profilePage/ProfileCard";
 
@@ -18,18 +19,13 @@ const members = [
   },
   {
     image: member3,
-    name: "Josephine Black",
+    name: "Josephine Asmah",
     position: "Project Manager",
   },
   {
-    image: member,
-    name: "Genesis",
+    image: member4,
+    name: "Jeffery Kyei Baafi",
     position: "Product Manager",
-  },
-  {
-    image: member,
-    name: "Prince Black ",
-    position: "Software Engineer(Backend)",
   },
   {
     image: member2,
@@ -38,12 +34,18 @@ const members = [
   },
 
   {
-    image: member,
+    image: '',
+    name: "Prince Appiah Boadu ",
+    position: "Software Engineer(Backend)",
+  },
+ 
+  {
+    image: '',
     name: "Vincent Gyabeng",
     position: "Frontend Engineer",
   },
   {
-    image: member,
+    image: '',
     name: "New Slot",
     position: "Designer",
   },
