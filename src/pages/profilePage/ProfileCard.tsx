@@ -1,16 +1,16 @@
 
 
-const ProfileCard = () => {
+const ProfileCard = ({name,image,title}:any) => {
   return (
-    <div className=' w-[200px] h-[240px]  flex flex-col items-center justify-center space-y-3 shadow-xl'>
-      <div className=" bg-red-100 w-[110px] h-[110px] rounded-full flex items-center justify-center ">
-        <img className=' bg-blue-400 rounded-full w-[100px] h-[100px]' src="" alt="" />
+    <div className=' md:w-[250px] h-[240px]  flex flex-col items-center justify-center space-y-3 shadow-xl'>
+      <div className=" bg-red-100 w-[115px] h-[115px] rounded-full flex items-center justify-center ">
+        <img className=' bg-primary    object-contain  rounded-full w-[110px] h-[110px]' src={image} alt="" />
       </div>
       <div className=" flex items-center gap-1  flex-col">
-        <h1 className=' font-bold text-lg'>Simon Adjei </h1>
-        <p className=' text-sm'>Fullstack Engineer</p>
+        <h1 className='font-bold text-lg'>{name}</h1>
+        <p className=' text-sm'>{title}</p>
         <div className=" flex items-center gap-1">
-            <p className=' text-blue-300 text-lg'>✔</p>
+            <p className=' text-primary text-lg'>✔</p>
             <p className=' text-sm'>KNUST, Ghana </p>
         </div>
       </div>

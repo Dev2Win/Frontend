@@ -30,8 +30,8 @@ const Tabs = ({ tabs }: { tabs: TabsType }) => {
             onClick={() => handleTabClick(index)}
             className={`py-10 px-1 lg:px-4 pt-[20px] w-max lg:w-[max]  h-[50px] text-[16px]  lg:text-[18px] ${
               currentTab === index
-                ? "  border-b-4 border-[#5981f0] font-manrope  text-[#5e6df5] "
-                : " text-gray-700 "
+                ? "  border-b-4 border-primary font-manrope  text-primary "
+                : "text-gray-700 "
             }`}
           >
             <div className=" flex items-center gap-2">

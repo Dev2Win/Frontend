@@ -116,7 +116,7 @@ const Navbar = ({ open, setOpen }: any) => {
             </Link>
             <Link to="login/coach">
             
-              <button className="px-8 w-full py-5 rounded-md bg-blue-400 text-white font-bold">
+              <button className="px-8 w-full py-5 rounded-md bg-primary text-white font-bold">
                 Login as a Coach
               </button>
             </Link>

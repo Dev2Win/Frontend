@@ -1,18 +1,19 @@
 
 import Tabs from "../../components/profile/Tabs";
 import ProfileCard from "./ProfileCard";
+import image from '../../assets/simon.png'
 
 const ContentCard = () => {
   return (
     <div>
-      <div className=" bg-blue-400 w-full  h-[140px]"></div>
+      <div className=" bg-primary w-full  h-[140px]"></div>
       <div className="  px-[5%] mt-[-2rem]">
         <div className="">
           <div className="flex items-center gap-5">
             <div className=" w-[150px] bg-white flex items-center justify-center h-[150px] rounded-full">
               <img
-                className="  bg-blue-300 w-[140px] h-[140px] rounded-full"
-                src=""
+                className="  bg-primary w-[140px] h-[140px] rounded-full"
+                src={image}
                 alt=""
               />
             </div>
@@ -27,7 +28,7 @@ const ContentCard = () => {
               tabs={[
                 {
                   title: "Overview",
-                  content: <ProfileCard/>,
+                  content: <div>This is overview</div>,
                   value:""
                 },
                 {
