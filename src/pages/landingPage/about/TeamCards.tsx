@@ -4,6 +4,8 @@ import member2 from "../../../assets/kokonu.png";
 import member3 from "../../../assets/asmah.png";
 import member4 from '../../../assets/genesis.png'
 import member5 from '../../../assets/black.png'
+import member6 from '../../../assets/vini.png'
+import avatar from '../../../assets/avatarx-Photoroom.png'
 
 import ProfileCard from "../../profilePage/ProfileCard";
 
@@ -41,12 +43,12 @@ const members = [
   },
  
   {
-    image: '',
+    image: member6,
     name: "Vincent Gyabeng",
     position: "Frontend Engineer",
   },
   {
-    image: '',
+    image: avatar,
     name: "New Slot",
     position: "Designer",
   },
