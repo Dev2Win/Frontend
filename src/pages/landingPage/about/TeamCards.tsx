@@ -3,6 +3,7 @@ import member1 from "../../../assets/simon.png";
 import member2 from "../../../assets/kokonu.png";
 import member3 from "../../../assets/asmah.png";
 import member4 from '../../../assets/genesis.png'
+import member5 from '../../../assets/black.png'
 
 import ProfileCard from "../../profilePage/ProfileCard";
 
@@ -34,7 +35,7 @@ const members = [
   },
 
   {
-    image: '',
+    image: member5,
     name: "Prince Appiah Boadu ",
     position: "Software Engineer(Backend)",
   },
