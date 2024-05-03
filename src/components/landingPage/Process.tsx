@@ -11,7 +11,7 @@ const Process = () => {
           How It Works
         </h1>
       
-      <div className=" grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
+      <div className=" grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
         <div className="   bg-bgShade p-8 rounded-lg cursor-pointer hover:-translate-y-5 transition-all duration-300">
           <img
             src={icon}
@@ -65,7 +65,7 @@ const Process = () => {
             career building program.
           </p>
         </div>
-        <div
+        {/* <div
           className="bg-bgShade p-8 rounded-lg cursor-pointer hover:-translate-y-5 transition-all duration-300
        "
         >
@@ -84,7 +84,7 @@ const Process = () => {
             project related videos, personal chat experience with mentors ,
             career building program.
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

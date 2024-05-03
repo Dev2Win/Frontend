@@ -19,31 +19,33 @@ const CallToAction = () => {
           data-aos="fade-left"
           ata-aos-duration="2000"
         >
-          Millions of Jobs, Find <br /> the one that suits <br />
-          you.
+          Personalised Career Building & Mentorship
         </h1>
         <p
-          className="text-xl leading-8 text-gray font-semibold"
+          className="text-lg leading-8 text-gray font-semibold"
           data-aos="fade-left"
           data-aos-duration="2500"
         >
-          It is a long established fact that a reader will be distracted by the
-          real conten of a page when looking at its layout. The point of using
-          Lorem Ipsum is that it has a more-or-less normal distribution
+          We bridge the gap between envisioning a career and the tangible
+          reality it encompasses. Our platform offers a comprehensive overview
+          of various careers, providing valuable insights for better
+          understanding before you embark on skill enhancement within a chosen
+           field.
         </p>
         <ul
           className="list-disc marker:text-blue mx-4 lg:mx-auto mt-8 my-4"
           data-aos="fade-left"
           data-aos-duration="3000"
         >
-          <li className="text-xl font-semibold text-black/80">
-            Bring to the table win-win survival
+          <li className="text-lg font-semibold text-black/80">
+            Provide the best curated strategy for your success
           </li>
-          <li className="text-xl font-semibold text-black/80 my-4">
-            Capitalize on low hanging fruit to identify
+          <li className="text-lg font-semibold text-black/80 my-4">
+            Provide student mentors and industry expert mentors for your journey
           </li>
-          <li className="text-xl font-semibold text-black/80">
-            But I must explain to you how all this
+          <li className="text-lg font-semibold text-black/80">
+            Study and experience your mentorship at your own pace with a
+            personalised dashboard loaded with resources
           </li>
         </ul>
         <Link to="/about" data-aos="zoom-in" data-aos-duration="3000">

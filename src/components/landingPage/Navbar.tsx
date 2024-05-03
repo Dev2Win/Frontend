@@ -3,10 +3,11 @@ import { useState } from "react";
 import hamburgerMenu from "../../assets/hamburgerMenu.svg";
 import close from "../../assets/close.svg";
 import { Link, useNavigate } from "react-router-dom";
+import Modal from "../reusables/profilecard/Modal";
 
 const Navbar = ({ open, setOpen }: any) => {
   const [toggle, setToggle] = useState(false);
-  const [isSticky, setIsSticky] = useState(false);
+  const isSticky = false
 
   const navigate = useNavigate();
 
@@ -104,6 +105,24 @@ const Navbar = ({ open, setOpen }: any) => {
           </ul>
         </div>
       </nav>
+      <Modal open={open} onClose={()=> setOpen(!open)} >
+      <ul>
+          <div className="flex flex-col my-4 gap-4">
+            <Link to="login/dev">
+              <button className="border w-full border-[20B486] flex justify-center items-center  bg-transparent  px-6 gap-2 py-4">
+                {/* <img src={lock} /> */}
+                Login as Dev
+              </button>
+            </Link>
+            <Link to="login/coach">
+            
+              <button className="px-8 w-full py-5 rounded-md bg-primary text-white font-bold">
+                Login as a Coach
+              </button>
+            </Link>
+          </div>
+        </ul>
+      </Modal>
     </header>
   );
 };

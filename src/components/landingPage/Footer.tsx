@@ -55,12 +55,12 @@ const Footer = () => {
         <div>
           <h3 className="text-2xl font-bold">Careers</h3>
           <ul className="py-6 text-[#6D737A]">
-            <li className="py-2">Product Design</li>
-            <li className="py-2">Software Development</li>
+            <li className="py-2">Computer Engineering</li>
+            <li className="py-2">Electrical Engineering</li>
             <li className="py-2">Marketing</li>
-            <li className="py-2">Business</li>
-            <li className="py-2">Engineering Design</li>
-            <li className="py-2"> </li>
+            <li className="py-2">Business Finance</li>
+            <li className="py-2">Computer Science</li>
+            <li className="py-2">  </li>
             <li className="py-2"></li>
           </ul>
         </div>
