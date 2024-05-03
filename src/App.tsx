@@ -12,7 +12,13 @@ import StudentDashboard from "./pages/learners/StudentDashboard";
 import Materials from "./pages/learners/Materials";
 import About from "./pages/landingPage/about/About";
 import LandingPageLayout from "./components/layout/LandingPageLayout";
+
+import Welcome from "./components/onBoarding/Welcome";
+import UserType from "./components/onBoarding/UserType";
+import Mentee from "./components/onBoarding/Mentee";
+import Mentor from "./components/onBoarding/Mentor";
 import Profile from "./pages/profilePage/Profile";
+
 
 
 const App = () => {
@@ -27,9 +33,11 @@ const App = () => {
 
         <Route path="login/:type" element={<Login />} />
         <Route path="register/:type" element={<Register />} />
+        <Route path="onBoarding/welcome" element={<Welcome />} />
+        <Route path="onBoarding/userType" element={<UserType />} />
+        <Route path="onBoarding/mentor" element={<Mentor />} />
+        <Route path="onBoarding/mentee" element={<Mentee />} />
         <Route path="profile" element={<Profile />} />
-        
-
         <Route path="dashboard" element={<Dashboard />}>
           <Route path="chats" element={<Chats />} />
           <Route path="mentors" element={<Mentors />} />
