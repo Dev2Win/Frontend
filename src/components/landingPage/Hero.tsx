@@ -1,4 +1,4 @@
-import heroImg from "../../assets/Component 1.png";
+import educate from "../../assets/educate.svg";
 import Image from "../../assets/ourteam.svg";
 const Hero = () => {
   return (
@@ -43,7 +43,7 @@ const Hero = () => {
         </div>
 
         <img
-          src={heroImg}
+          src={educate}
           className="md:order-last  w-full  hover:animate-pulse   duration-1000  order-first"
         />
       </div>

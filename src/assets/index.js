@@ -34,3 +34,4 @@ export { default as CS1 } from "./supply-chain.jpg";
 export { default as CS4 } from "./xyz.jpg";
 export { default as CS5 } from "./e-commerce.jpg";
 export { default as CS6 } from "./marketing.jpg";
+export { default as educate } from "./educate.svg";
