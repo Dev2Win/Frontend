@@ -18,7 +18,7 @@ const Login = () => {
       <div className="bg-gray-100 flex rounded-2xl shadow-lg max-w-3xl p-5 items-center">
         {/* form */}
         <div className="md:w-1/2 px-8 md:px-16">
-          <h2 className="font-bold text-2xl text-blue-400">
+          <h2 className="font-bold text-2xl text-primary">
             Login {type === "dev" ? "as Dev" : "as coach"}{" "}
           </h2>
           <p className="text-xs mt-4 text-[#3b5d92]">
@@ -54,7 +54,7 @@ const Login = () => {
                 <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
               </svg>
             </div>
-            <button className="bg-blue-400 rounded-xl text-white py-2 hover:scale-105 duration-300">
+            <button className="bg-primary rounded-xl text-white py-2 hover:scale-105 duration-300">
               Login
             </button>
           </form>

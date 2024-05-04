@@ -41,7 +41,7 @@ const SidebarNavigation = () => {
       <div className={`p-6 h-screen bg-white shadow-lg z-20 fixed top-0 -left-96 lg:left-0 lg:w-60 peer-focus:left-0 peer:transition ease-out delay-150 duration-200 ${isSidebarOpen ? 'left-0 md:block' : ''}`}>
         <div className="flex flex-col justify-start item-center">
           <h1 className="text-base text-center cursor-pointer font-bold text-blue-900 border-b border-gray-100 pb-4 w-full">
-            <h2 style={{ fontFamily: "Poppins" }} className="font-bold text-black group text-[2rem]">Dev<span className="text-[2rem] font-bold text-blue-400">2</span>Win</h2>
+            <h2  className="font-bold text-black  text-[2rem]">Dev<span className="text-[2rem] font-bold text-primary">2</span>Win</h2>
           </h1>
 
           <div className="my-4 border-b border-gray-100 pb-4">
@@ -64,8 +64,8 @@ const SidebarNavigation = () => {
 
           <div className="my-4">
             <div className="flex mb-2 justify-start items-center gap-4 pl-5 border border-gray-200 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto">
-              <MdOutlineLogout className="text-2xl text-gray-600 group-hover:text-white" />
-              <h3 className="text-base text-gray-800 group-hover:text-white font-semibold">Logout</h3>
+              <MdOutlineLogout className="text-2xl text-gray-600 " />
+              <h3 className="text-base text-gray-800 font-semibold">Logout</h3>
             </div>
           </div>
         </div>

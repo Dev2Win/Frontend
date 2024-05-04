@@ -77,7 +77,7 @@ const Categories = () => {
                   className="rounded-lg w-full  h-80 transform transition-transform group-hover:scale-110 ease-in-out duration-300 hover:cursor-pointer"
                 />
               </div>
-              <Link to="">
+              <Link to="/">
                 <p className="font-bold text-3xl hover:text-purple-900 my-4">
                   {" "}
                   {card.title}
@@ -87,7 +87,7 @@ const Categories = () => {
               <div className="text-purple-900 font-medium">
                 {card.categories.map((category, categoryIndex) => (
                   <span key={categoryIndex}>
-                    <Link to="">{category.name}</Link>
+                    <Link to="/">{category.name}</Link>
                     {categoryIndex < card.categories.length - 1 ? " / " : ""}
                   </span>
                 ))}
