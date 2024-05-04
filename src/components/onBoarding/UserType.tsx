@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import mentor from "../../assets/8SCENE.svg";
 import mentee from "../../assets/9SCENE.svg";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 interface Option {
