@@ -68,7 +68,7 @@ const Categories = () => {
           .slice(currentIndex, currentIndex + itemsPerPage)
           .map((card) => (
             <div key={card.id} className="col-span-2 md:col-span-1">
-              <div class="group relative overflow-hidden">
+              <div className="group relative overflow-hidden">
                 <img
                   height="auto"
                   width="auto"
@@ -77,7 +77,7 @@ const Categories = () => {
                   className="rounded-lg w-full  h-80 transform transition-transform group-hover:scale-110 ease-in-out duration-300 hover:cursor-pointer"
                 />
               </div>
-              <Link>
+              <Link to="">
                 <p className="font-bold text-3xl hover:text-purple-900 my-4">
                   {" "}
                   {card.title}
@@ -87,7 +87,7 @@ const Categories = () => {
               <div className="text-purple-900 font-medium">
                 {card.categories.map((category, categoryIndex) => (
                   <span key={categoryIndex}>
-                    <Link>{category.name}</Link>
+                    <Link to="">{category.name}</Link>
                     {categoryIndex < card.categories.length - 1 ? " / " : ""}
                   </span>
                 ))}

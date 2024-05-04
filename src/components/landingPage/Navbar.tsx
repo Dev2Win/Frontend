@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = ({ open, setOpen }: any) => {
   const [toggle, setToggle] = useState(false);
-  const [isSticky, setIsSticky] = useState(false);
+  const [isSticky] = useState(false);
 
   const navigate = useNavigate();
 

@@ -1,4 +1,3 @@
-import ProfileCard from "../../../components/reusables/profilecard/ProfileCard";
 import CallToAction from "./CallToAction";
 import Hero from "./Hero";
 import TeamCards from "./TeamCards";
